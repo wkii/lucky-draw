@@ -46,7 +46,7 @@
               <span
                 v-if="!!list.find((d) => d.key === item)"
                 :style="{
-                  fontSize: '40px',
+                  fontSize: '20px',
                 }"
               >
                 {{ list.find((d) => d.key === item).name }}
@@ -453,7 +453,6 @@ export default {
     height: 160px;
     border-radius: 4px;
     border: 1px solid #ccc;
-    line-height: 160px;
     font-weight: bold;
     margin-right: 20px;
     margin-bottom: 20px;
