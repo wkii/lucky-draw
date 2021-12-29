@@ -10,9 +10,7 @@
       <span :style="{ fontSize: '18px' }">
         抽奖结果
       </span>
-      <span :style="{ fontSize: '14px', color: '#999', marginLeft: '10px' }">
-        (点击号码可以删除)
-      </span>
+
     </div>
     <div
       v-for="(item, index) in resultList"
@@ -142,7 +140,7 @@ export default {
       cursor: pointer;
       &:hover {
         &::before {
-          content: '删除';
+          content: '✕';
           width: 100%;
           height: 100%;
           background-color: #ccc;

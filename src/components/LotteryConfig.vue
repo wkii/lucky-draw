@@ -31,7 +31,7 @@
             :step="1"
           ></el-input>
         </el-form-item>
-        <el-form-item label="一等奖">
+        <el-form-item label="特等奖">
           <el-input
             type="number"
             v-model="form.firstPrize"
@@ -77,6 +77,7 @@
       </el-form>
     </el-dialog>
   </el-dialog>
+
 </template>
 <script>
 import { setData, configField } from '@/helper/index';

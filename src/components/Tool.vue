@@ -7,11 +7,11 @@
       重置
     </el-button>
     <el-button size="mini" @click="showImport = true">
-      导入名单
+      导入
     </el-button>
-    <el-button size="mini" @click="showImportphoto = true">
-      导入照片
-    </el-button>
+<!--    <el-button size="mini" @click="showImportphoto = true">-->
+<!--      导入照片-->
+<!--    </el-button>-->
     <el-dialog
       :append-to-body="true"
       :visible.sync="showSetwat"
@@ -45,10 +45,9 @@
 
         <el-form-item label="抽取方式">
           <el-select v-model="form.mode" placeholder="请选取本次抽取方式">
-            <el-option label="抽1人" :value="1"></el-option>
-            <el-option label="抽5人" :value="5"></el-option>
-            <el-option label="一次抽取完" :value="0"></el-option>
-            <el-option label="自定义" :value="99"></el-option>
+            <el-option label="每次抽1人" :value="1"></el-option>
+            <el-option label="每次抽5人" :value="5"></el-option>
+            <el-option label="一次全部抽完" :value="0"></el-option>
           </el-select>
         </el-form-item>
 
@@ -61,13 +60,6 @@
             :max="remain ? remain : 100"
             :step="1"
           ></el-input>
-        </el-form-item>
-
-        <el-form-item label="全员参与">
-          <el-switch v-model="form.allin"></el-switch>
-          <span :style="{ fontSize: '12px' }">
-            (开启后将在全体成员[无论有无中奖]中抽奖)
-          </span>
         </el-form-item>
 
         <el-form-item>
